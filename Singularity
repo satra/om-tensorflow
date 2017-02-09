@@ -16,7 +16,7 @@ From: tensorflow/tensorflow:1.0.0-rc1-gpu-py3
     wget http://us.download.nvidia.com/XFree86/Linux-x86_64/${NV_DRIVER_VERSION}/NVIDIA-Linux-x86_64-${NV_DRIVER_VERSION}.run
 
     echo "Unpacking NVIDIA driver into container..."
-    cd ${SINGULARITY_ROOTFS}/usr/local/
+    cd /usr/local/
     sh ${working_dir}/${NV_DRIVER_FILE} -x
     mv NVIDIA-Linux-x86_64-${NV_DRIVER_VERSION} NVIDIA-Linux-x86_64
     cd NVIDIA-Linux-x86_64/
@@ -35,6 +35,6 @@ LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:$NV_DRI
 PATH=$NV_DRIVER_PATH:\$PATH
 export PATH LD_LIBRARY_PATH
     
-" >> $SINGULARITY_ROOTFS/environment   
+" >> /environment   
 
 mkdir /om
