@@ -53,6 +53,7 @@ export PATH LD_LIBRARY_PATH
 " >> /environment   
 
     mkdir /om                      # <---- EDIT: SPECIFIC FILESYSTEM MOUNT
+    mkdir /cm                      # <---- EDIT: SPECIFIC FILESYSTEM MOUNT
 %test
     # Ensure that TensorFlow can be imported
     /usr/bin/python -c "import tensorflow as tf"
