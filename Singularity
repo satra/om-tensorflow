@@ -5,7 +5,8 @@
 # Check sections <---- EDIT:
 
 BootStrap: docker
-From: tensorflow/tensorflow:1.0.0-gpu-py3       # <---- EDIT: DETERMINE WHICH VERSION OF TENSORFLOW YOU WANT
+From: tensorflow/tensorflow:1.0.0-gpu-py3
+# <---- EDIT: ABOVE TO DETERMINE WHICH VERSION OF TENSORFLOW YOU WANT. do not put any comments on that line.
 
 %runscript
     # When executed, the container will run Python with the TensorFlow module
